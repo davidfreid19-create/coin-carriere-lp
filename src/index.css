@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-deep-blue: #16275f;
+  --color-lime-green: #a0c402;
+  --color-lime-hover: #8da802;
+  --color-off-white: #f9fafb;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-deep-blue bg-white selection:bg-lime-green selection:text-deep-blue;
+  }
+}
+
+@layer utilities {
+  .text-gradient-hero {
+    background: linear-gradient(to right, #ffffff, #a0c402);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
